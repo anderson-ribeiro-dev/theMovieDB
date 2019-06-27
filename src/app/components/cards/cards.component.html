@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="card-columns m-4 animated fadeIn mb-5">
+      <div (click)="viewMovie(item)" *ngFor="let item of items" class="card puntero">
+        <img class="card-img-top" [src]="item | moviePicture" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ item.title }}</h5>
+          <p class="card-text">
+            <span *ngFor="let movie of item.movie" class="badge badge-pill badge-primary">
+              {{ movie.name }}
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
